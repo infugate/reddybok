@@ -1,41 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import { FaSignOutAlt } from "react-icons/fa";
-import logo from '../assets/brand/fastbetLogo.png'
 import { useProfile } from '../context/ProfileContext';
 import { useLocation, useNavigate } from "react-router-dom";
 
 const NavbarContainer = styled.nav`
- margin-top:-7px;
+  margin-top: -7px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#0b3c68;
+  background-color: #0b3c68;
   color: white;
   padding: 14px 0px;
   position: fixed;
   overflow-y: auto;
   z-index: 1000;
-  width:100%;
+  width: 100%;
 `;
 
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-left:21px;
+  margin-left: 21px;
 `;
 
-const LogoImage = styled.img`
-  width: 40px; 
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-`;
-
-const CenterText = styled.div`
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
+const LogoText = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 `;
 
 const WalletIcon = styled.div`
@@ -82,7 +74,7 @@ export default function Navbar() {
   return (
     <NavbarContainer>
       <LogoContainer>
-        <LogoImage src={logo} alt="Logo" />
+        <LogoText>ReddyBook</LogoText>
       </LogoContainer>
       
       <BalanceContainer>
