@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Box, Typography, Container } from "@mui/material";
 
-function Login({ setIsAuthenticated }) {
+function Login({ setIsAuthenticated }) { 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
